@@ -55,8 +55,8 @@ poc-chat/
 ### 1. Cloner le repository
 
 ```bash
-git clone <url-du-repository>
-cd poc-chat
+git clone https://github.com/hafidaAssendal/D-finissez_une_solution_fonctionnelle_et_concevez_l-architecture_d-une_application_POC_CHAT.git
+cd D-finissez_une_solution_fonctionnelle_et_concevez_l-architecture_d-une_application_POC_CHAT
 ```
 
 ### 2. Compiler et lancer les tests
@@ -82,24 +82,24 @@ L'application démarre sur `http://localhost:8080`.
 
 ## Fonctionnalités démontrées
 
-- ✅ Connexion WebSocket via SockJS (fallback HTTP si WebSocket non supporté)
-- ✅ Protocole STOMP pour la gestion des messages
-- ✅ Conversation identifiée par un `conversationId` unique
-- ✅ Distinction entre les rôles USER (client) et AGENT (support)
-- ✅ Messages en temps réel bidirectionnels
-- ✅ Notifications de connexion/déconnexion (JOIN/LEAVE)
-- ✅ Horodatage des messages
+- Connexion WebSocket via SockJS (fallback HTTP si WebSocket non supporté)
+- Protocole STOMP pour la gestion des messages
+- Conversation identifiée par un `conversationId` unique
+- Distinction entre les rôles USER (client) et AGENT (support)
+- Messages en temps réel bidirectionnels
+- Notifications de connexion/déconnexion (JOIN/LEAVE)
+- Horodatage des messages
 
 ## Conformité avec l'Architecture Definition Document
 
-| Spécification ADD                  | Implémentation PoC                        |
-|------------------------------------|-------------------------------------------|
-| Spring WebSocket                   | ✅ `spring-boot-starter-websocket`        |
-| Protocole STOMP                    | ✅ `@MessageMapping`, broker `/topic`     |
-| SockJS (compatibilité)            | ✅ `.withSockJS()` dans WebSocketConfig   |
-| ChatMessage {USER, AGENT}          | ✅ Enum `SenderType` dans le modèle       |
-| ChatConversation (conversationId)  | ✅ Topic par conversation `/topic/conversation/{id}` |
-| Spring Boot 3.2 / Java 17         | ✅ Versions conformes dans pom.xml        |
+| Spécification ADD                  | Implémentation PoC                       |
+|------------------------------------|------------------------------------------|
+| Spring WebSocket                   | `spring-boot-starter-websocket`        |
+| Protocole STOMP                    | `@MessageMapping`, broker `/topic`     |
+| SockJS (compatibilité)            | `.withSockJS()` dans WebSocketConfig   |
+| ChatMessage {USER, AGENT}          | Enum `SenderType` dans le modèle       |
+| ChatConversation (conversationId)  | Topic par conversation `/topic/conversation/{id}` |
+| Spring Boot 3.2 / Java 17         |  Versions conformes dans pom.xml        |
 
 ## Limitations du PoC
 
