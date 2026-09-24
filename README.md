@@ -1,4 +1,4 @@
-# Your Car Your Way — PoC Chat en temps réel
+#  Your Car Your Way — PoC Chat en temps réel
 
 ## Description
 
@@ -110,3 +110,20 @@ Ce PoC se concentre uniquement sur la faisabilité technique du chat en temps r�
 - Historique des conversations
 - Visioconférence
 - Interface Angular (le frontend est un simple HTML/JS de test)
+
+#  Your Car Your Way — Base de données de projet
+
+Le dossier `database/` contient le fichier SQL avec les scripts de la base de données relationnelle du projet Your Car Your Way.
+
+### Contenu du fichier SQL
+- Création de la base de données
+- Création des tables et des relations (clés primaires et étrangères)
+- Insertion de données de test
+
+### Installation
+1. Ouvrir votre SGBD (MySQL, PostgreSQL…).
+2. Exécuter le script :
+```bash
+   mysql -u utilisateur -p < database/schema.sql
+```
+3. Vérifier que les tables ont bien été créées.
